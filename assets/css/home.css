@@ -1,0 +1,11 @@
+body {
+  font-family: "Circular" !important;
+}
+
+#sidebar-first ul li a:hover {
+  color: white !important;
+}
+
+#comments p {
+  font-size: 12px !important;
+}
