@@ -9,3 +9,28 @@ body {
 #comments p {
   font-size: 12px !important;
 }
+
+#first-card p {
+  font-size: 14px;
+}
+
+figure.effect-sadie figcaption::after,
+figure.effect-sadie i {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie i {
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover i {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
