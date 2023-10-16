@@ -1,0 +1,5 @@
+body {
+    background: rgb(196,141,43);
+    background: linear-gradient(180deg, rgba(196,141,43,1) 0%, rgba(0,0,0,1) 67%);
+    background-attachment: fixed;
+}
