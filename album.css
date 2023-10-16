@@ -1,5 +1,22 @@
 body {
-    background: rgb(196,141,43);
-    background: linear-gradient(180deg, rgba(196,141,43,1) 0%, rgba(0,0,0,1) 67%);
+    font-size: 20px !important;
+    background: rgb(196, 141, 43);
+    background: linear-gradient(180deg, rgb(156, 111, 34) 0%, rgba(0, 0, 0, 1) 67%);
     background-attachment: fixed;
+}
+
+nav {
+    transition: all 0.5s;
+}
+
+#nameAlbum {
+    transition: all 0.5s;
+}
+
+#main-album-img {
+    box-shadow: 3px 3px 40px black;
+}
+
+.text-light.btn.fs-5:hover {
+    color: rgb(147, 147, 233) !important;
 }
