@@ -1,0 +1,30 @@
+img{
+    margin-left: 163px;
+    transform: rotate(28deg);
+    border-radius: 30px;
+    width: 45%;
+}
+
+
+.card-body{
+    overflow: hidden;
+}
+
+
+.colore::placeholder{
+    color: white;
+}
+
+.colore{
+    color: white !important;
+}
+
+.ricerca::placeholder{
+  color: white;
+}
+
+.search{
+    justify-content: center;
+    width: 580px;
+    margin-bottom: 55px;
+}
