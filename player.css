@@ -59,6 +59,7 @@ p {
 
 #playback-bar {
   display: flex;
+  align-items: center;
 }
 
 #volume-bar {
@@ -74,4 +75,14 @@ p {
 
 #icon-volBar .barvolum div {
   display: flex;
+}
+
+#playback-bar input {
+  margin-top: 0.5em;
+}
+
+#playback-bar div span {
+  color: white;
+  font-size: 13px;
+  margin: 0.5em;
 }
