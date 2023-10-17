@@ -17,14 +17,26 @@ img{
 
 .colore{
     color: white !important;
+    padding-left: 20px;
+   
 }
 
+
+
 .ricerca::placeholder{
-  color: white;
+  color: black;
 }
 
 .search{
-    justify-content: center;
-    width: 580px;
+    
+   
     margin-bottom: 55px;
+}
+
+#ricerca2 input {
+ background-image: url(lente.svg);
+ background-repeat: no-repeat;
+ background-position: left center;
+ background-color: white;
+
 }
