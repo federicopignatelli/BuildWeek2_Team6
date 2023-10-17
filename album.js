@@ -7,7 +7,7 @@ const albumNavbar = document.createElement("span")
 
 // const addressBarContent = new URLSearchParams(location.search)
 // const albumId = addressBarContent.get("albumId")
-const albumId = "75621062"
+const albumId = "75621052"
 
 const header = (obj1) => {
 
