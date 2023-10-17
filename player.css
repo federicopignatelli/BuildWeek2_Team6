@@ -1,0 +1,77 @@
+body {
+  font-family: "Circular";
+  margin: 0;
+}
+
+#container {
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em;
+}
+
+#brano {
+  display: flex;
+  align-items: center;
+}
+
+#brano img {
+  width: 50px;
+  margin-right: 1.2em;
+}
+
+#brano h5,
+p {
+  margin: 0;
+  line-height: 1.2em;
+  margin-right: 1.2em;
+}
+
+#brano h5 {
+  color: white;
+}
+
+#brano p {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 12px;
+}
+
+#container button {
+  border: none;
+  background: transparent;
+}
+
+#container svg {
+  fill: hsla(0, 0%, 100%, 0.7);
+}
+
+#center-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#player {
+  display: flex;
+}
+
+#playback-bar {
+  display: flex;
+}
+
+#volume-bar {
+  display: flex;
+}
+#icon-volBar {
+  display: flex;
+}
+
+#icon-volBar .barvolum {
+  display: flex;
+}
+
+#icon-volBar .barvolum div {
+  display: flex;
+}
