@@ -22,7 +22,7 @@
     <div class="container-fluid m-0 p-0 pe-4">
       <div class="row">
         <div class="d-none d-lg-block col-lg-3 vh-100">
-          <header style="position: fixed; height: 100vh">
+          <header style="position: fixed; height: 100vh; width: 24%">
             <div
               class="d-flex flex-column flex-shrink-0 p-3 bg-black h-100"
               id="sidebar-first"
@@ -114,7 +114,7 @@
         </div>
         <div class="col-12 col-lg-9 p-0">
           <main>
-            <div class="container my-3">
+            <div class="container-fluid mt-3 mb-2">
               <div class="row justify-content-between">
                 <div class="col-4 d-flex align-items-center">
                   <button class="bg-black border-0 rounded-circle">
@@ -159,64 +159,32 @@
               </div>
             </div>
             <div
-              class="container d-none d-lg-flex bg-black px-3 pt-4 pb-3 justify-content-between"
+              class="container-fluid d-none d-lg-flex bg-black px-3 pt-4 pb-3 justify-content-between"
             >
-              <div class="row w-100">
-                <div class="col-lg-3">
-                  <img src="assets/imgs/main/image-15.jpg" class="w-100" />
-                </div>
-                <div class="col-lg-5">
-                  <p class="text-white">ALBUM</p>
-                  <h1 class="text-white">Titolo del Brano</h1>
-                  <p class="text-white">Artista</p>
-                  <p class="text-white">Ascolta il nuovo singolo di xxxx</p>
-                  <div class="col d-flex align-items-center">
-                    <button
-                      type="button"
-                      class="btn rounded-5 text-black px-3"
-                      style="background-color: rgb(54, 220, 49)"
-                    >
-                      Play
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-black text-white border-1 border-white rounded-5 ms-3"
-                    >
-                      Salva
-                    </button>
-                    <i class="bi bi-three-dots fs-3 text-white-50 ms-3"></i>
-                  </div>
-                </div>
-                <div class="col-4 p-0">
-                  <button
-                    class="btn bg-black-50 text-white w-100"
-                    style="font-size: 12px"
-                  >
-                    NASCONDI ANNUNCI
-                  </button>
-                </div>
+              <div class="row w-100 d-none d-lg-flex" id="banner-row">
+                <!-- qui banner-row -->
               </div>
             </div>
 
-            <div class="container mt-3" id="first-card">
+            <div class="container-fluid mt-3" id="first-card">
               <h3 class="text-white mb-3">Buonasera</h3>
               <div class="row" id="firstRowCard">
                 <!-- generiamo cards da js -->
               </div>
 
-              <div class="container mt-3">
+              <div class="container-fluid mt-3">
                 <h3 class="text-white mb-3">Altro di ciò che ti piace</h3>
                 <div class="row" id="second-row">
                   <!-- qui card in js -->
                 </div>
               </div>
-              <div class="container mt-3">
+              <div class="container-fluid mt-3">
                 <h3 class="text-white mb-3">I tuoi album preferiti</h3>
                 <div class="row" id="third-row">
                   <!-- qui card dinamiche -->
                 </div>
               </div>
-              <div class="container mt-3">
+              <div class="container-fluid mt-3">
                 <h3 class="text-white mb-3">I tuoi artisti preferiti</h3>
                 <div class="row" id="fourth-row">
                   <!-- qui card js -->
