@@ -27,92 +27,73 @@
           placeholder=" Cosa vuoi ascoltare?"
         />
       </form>
-
-      <div class="container">
-        <div
-          class="d-flex flex-column flex-shrink-0 p-3 bg-black h-100"
-          id="sidebar-first"
-        >
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-              <a
-                href="index.html"
-                class="nav-link text-white-50"
-                aria-current="page"
-              >
-                <i class="bi bi-house-door-fill me-2"></i>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white-50">
-                <i class="bi bi-search me-2"></i>
-                Cerca
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white-50">
-                <i class="bi bi-collection-fill me-2"></i>
-                La tua libreria
-              </a>
-            </li>
-          </ul>
-          <div class="row mt-3">
-            <div class="col">
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-white-50"
-                    aria-current="page"
-                  >
-                    <i class="bi bi-plus-square-fill me-2"></i>
-                    Crea playlist
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-white-50"
-                    aria-current="page"
-                  >
-                    <i class="bi bi-heart-fill me-2"></i>
-                    Brani che ti piacciono
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-white-50"
-                    aria-current="page"
-                  >
-                    <i class="bi bi-bookmark-fill me-2"></i>
-                    I tuoi episodi
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <div
+        class="d-flex flex-column flex-shrink-0 p-3 bg-black h-100 d-sm-none d-md-flex"
+        id="sidebar-first"
+      >
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a
+              href="index.html"
+              class="nav-link text-white-50"
+              aria-current="page"
+            >
+              <i class="bi bi-house-door-fill me-2"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white-50">
+              <i class="bi bi-search me-2"></i>
+              Cerca
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white-50">
+              <i class="bi bi-collection-fill me-2"></i>
+              La tua libreria
+            </a>
+          </li>
+        </ul>
+        <div class="row mt-3">
+          <div class="col">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50" aria-current="page">
+                  <i class="bi bi-plus-square-fill me-2"></i>
+                  Crea playlist
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50" aria-current="page">
+                  <i class="bi bi-heart-fill me-2"></i>
+                  Brani che ti piacciono
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50" aria-current="page">
+                  <i class="bi bi-bookmark-fill me-2"></i>
+                  I tuoi episodi
+                </a>
+              </li>
+            </ul>
           </div>
-          <hr />
-          <div class="container-fluid" id="comments">
-            <div class="row">
-              <div class="col">
-                <p class="text-white-50">
-                  early stage emily syndrome (sett-ott 2022)
-                </p>
-                <p class="text-white-50">Be The Young</p>
-                <p class="text-white-50">".." cit. Kimiko (lug-ago 2022)</p>
-                <p class="text-white-50">saggio vibes 口大</p>
-                <p class="text-white-50">
-                  main character energy (mag-giu 2022)
-                </p>
-                <p class="text-white-50">Be The Young</p>
-                <p class="text-white-50">".." cit. Kimiko (lug-ago 2022)</p>
-                <p class="text-white-50">saggio vibes 口大</p>
-                <p class="text-white-50">
-                  main character energy (mag-giu 2022)
-                </p>
-              </div>
+        </div>
+        <hr />
+        <div class="container-fluid" id="comments">
+          <div class="row">
+            <div class="col">
+              <p class="text-white-50">
+                early stage emily syndrome (sett-ott 2022)
+              </p>
+              <p class="text-white-50">Be The Young</p>
+              <p class="text-white-50">".." cit. Kimiko (lug-ago 2022)</p>
+              <p class="text-white-50">saggio vibes 口大</p>
+              <p class="text-white-50">main character energy (mag-giu 2022)</p>
+              <p class="text-white-50">Be The Young</p>
+              <p class="text-white-50">".." cit. Kimiko (lug-ago 2022)</p>
+              <p class="text-white-50">saggio vibes 口大</p>
+              <p class="text-white-50">main character energy (mag-giu 2022)</p>
             </div>
           </div>
         </div>
@@ -124,6 +105,7 @@
       <div class="container">
         <div class="row">
           <h2 class="text-light text-center mb-3">Sfoglia Tutto</h2>
+
           <div class="col col-12 col-sm-6 col-md-3">
             <div class="card bg-danger mb-4">
               <div class="card-body">
@@ -419,7 +401,7 @@
           </div>
 
           <div class="col col-12 col-sm-6 col-md-3">
-            <div class="card" style="background-color: rgb(175, 57, 184)">
+            <div class="card mb-4" style="background-color: rgb(175, 57, 184)">
               <div class="card-body">
                 <h5 class="card-title text-light">League of Legends</h5>
                 <img src="/assets/imgs/search/image-30.jpg" alt="imagine" />
@@ -432,6 +414,168 @@
               <div class="card-body">
                 <h5 class="card-title text-light">Kickas Metal</h5>
                 <img src="/assets/imgs/search/image-31.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card mb-4" style="background-color: rgb(52, 188, 207)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Nu-Funk</h5>
+                <img src="/assets/imgs/search/image-32.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(179, 27, 55)">
+              <div class="card-body">
+                <h5 class="card-title text-light">New Punk Trucks</h5>
+                <img src="/assets/imgs/search/image-33.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(29, 133, 107)">
+              <div class="card-body">
+                <h5 class="card-title text-light">New Punk Trucks</h5>
+                <img src="/assets/imgs/search/image-34.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(132, 219, 70)">
+              <div class="card-body">
+                <h5 class="card-title text-light">K-Pop</h5>
+                <img src="/assets/imgs/search/image-35.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(132, 219, 70)">
+              <div class="card-body">
+                <h5 class="card-title text-light">In The Name of The Blues</h5>
+                <img src="/assets/imgs/search/image-36.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(2, 168, 201)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Metal</h5>
+                <img src="/assets/imgs/search/image-37.jpeg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(2, 168, 201)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Classical Music</h5>
+                <img src="/assets/imgs/search/image-38.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(173, 42, 79)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Hot Country</h5>
+                <img src="/assets/imgs/search/image-39.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(44, 47, 69)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Frequency</h5>
+                <img src="/assets/imgs/search/image-40.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(217, 91, 202)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Arab-Pop</h5>
+                <img src="/assets/imgs/search/image-41.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(68, 63, 87)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Radar</h5>
+                <img src="/assets/imgs/search/image-43.png" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(68, 63, 87)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Pop For Kids</h5>
+                <img src="/assets/imgs/search/image-44.png" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(28, 13, 84)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Daily Drive</h5>
+                <img src="/assets/imgs/search/image-45.png" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(161, 13, 161)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Phonk</h5>
+                <img src="/assets/imgs/search/image-46.jpeg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(82, 240, 242)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Top Christian</h5>
+                <img src="/assets/imgs/search/image-48.jpeg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(54, 224, 96)">
+              <div class="card-body">
+                <h5 class="card-title text-light">RockerRas</h5>
+                <img src="/assets/imgs/search/image-50.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(242, 61, 209)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Mood Booster</h5>
+                <img src="/assets/imgs/search/image-51.jpg" alt="imagine" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-sm-6 col-md-3">
+            <div class="card" style="background-color: rgb(40, 153, 98)">
+              <div class="card-body">
+                <h5 class="card-title text-light">Top Gaming Trucks</h5>
+                <img src="/assets/imgs/search/image-52.jpg" alt="imagine" />
               </div>
             </div>
           </div>
