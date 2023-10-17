@@ -16,7 +16,7 @@ const header = (obj1) => {
 
 
     header.innerHTML = `
-    <div class="d-none d-md-flex mt-5 mx-2">
+    <div class="d-none d-md-flex mt-3 mx-2">
 
     <div class="col-3 col-xl-2">
     <img src="${obj1.cover_xl}" alt="album-image" class="w-100" id="main-album-img">
