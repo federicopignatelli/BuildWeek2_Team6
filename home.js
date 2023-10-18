@@ -48,7 +48,7 @@ const renderBanner = function (obj) {
       </div>
       <div class="col-4 p-0 d-flex align-items-start justify-content-end">
         <button
-          class="btn bg-black-50 text-white-50 w-50 pe-0"
+          class="btn bg-black-50 text-white-50 w-50 px-0"
           style="font-size: 12px"
         >
           NASCONDI ANNUNCI
