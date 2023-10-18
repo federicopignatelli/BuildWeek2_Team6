@@ -21,7 +21,7 @@ img{
 
 .colore{
     color: white !important;
-    padding-left: 20px;
+    padding-left: 25px;
    
 }
 
@@ -31,21 +31,27 @@ img{
   color: black;
 }
 
-.bi{
-    fill: white !important;
-}
-
 
 .search{
  margin-bottom: 55px;
 }
 
-#ricerca2 input {
- background-image: url(lente.svg);
- background-repeat: no-repeat;
- background-position: left center;
- background-color: white;
+.formazione{
+    flex-shrink: 0;
+    width: 100%;
+}
 
+.lentesopra{
+    color: white;
+    position: relative;
+    left: 20px;
+    bottom:  -4px;;
+}
+
+
+footer {
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 55%);
 }
 
 
