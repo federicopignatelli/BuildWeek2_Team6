@@ -1,70 +1,14 @@
-const address = new URLSearchParams(location.search)
-const artistId = address.get('id')
-console.log(artistId)
-
-
-const getInfoByArtist = function () {
-    //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2')
-        .then((res) => {
-            console.log('ok', res)
-            if (res.ok) {
-                return res.json()
-            }
-            else {
-                throw new Error('ce un errore')
-            }
-        })
-        .then(music => {
-            console.log('music', music)
-            renderCover(music)
-            renderIconLiked(music)
-        })
-
-        .catch(err => {
-            console.log('err', err)
-        })
-}
-getInfoByArtist()
-
-
-
-
-
-
-const getMusicByArtist = function () {
-    //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50')
-        .then((res) => {
-            console.log('ok', res)
-            if (res.ok) {
-                return res.json()
-            }
-            else {
-                throw new Error('ce un errore')
-            }
-        })
-        .then(music => {
-            console.log('music', music)
-            renderMusic(music)
-        })
-
-        .catch(err => {
-            console.log('err', err)
-        })
-}
-getMusicByArtist()
 
 
 const renderMusic = function (data) {
     const musicContainer = document.getElementById('PopularMusic')
 
-    data.data.forEach((song) => {
+    data.data.forEach((song, i) => {  //qui da vedere il collegamento
         const newRow = document.createElement('div')
         newRow.classList.add('row', 'mb-3')
 
         newRow.innerHTML = `<div class="col col-1">
-        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">1</p>
+        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
     </div>
     <div class="col col-3 col-md-3 col-lg-2 col-xxl-1">
         <img src="${song.album.cover_small}" alt="img" width="55px">
@@ -93,23 +37,53 @@ const renderMusic = function (data) {
     });
 }
 
+const address = new URLSearchParams(location.search)
+const artistId = address.get('artistid')
+console.log(artistId)
+
+const getInfoByArtist = function () { //qua capire come comporre il link
+    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50')
+        //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId + 'top')
+        //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
+        .then((res) => {
+            console.log('ok', res)
+            if (res.ok) {
+                return res.json()
+            }
+            else {
+                throw new Error('ce un errore')
+            }
+        })
+        .then(music => {
+            console.log('music', music)
+
+            renderCover(music)
+            renderIconLiked(music)
+            renderMusic(music)
+        })
+
+        .catch(err => {
+            console.log('err', err)
+        })
+}
+getInfoByArtist()
 
 
 
 
 
 
-const renderCover = function (data) {
+const renderCover = function (music) {
     const rowcover = document.getElementById('header-artist')
     rowcover.innerHTML = `<div class="col col-12 p-0 m-0 d-flex justify-content-center bg-dark" 
                      style="position: relative; max-height: 60vh;">
 
-    <img src="${data.picture_xl}" alt="imgartist"
+    <img src="${music.picture_xl}" alt="imgartist"
         style="opacity: 0.6; width: 100%; max-height: 100%; box-sizing: container;">
 
     <div class="col col-11" style="position: absolute; bottom: 10px; left: 25px;">
-        <h1 class="text-white fs-1">${data.name}</h1>
-        <p class="text-white">${data.nb_fan} ascoltatori mensili</p>
+        <h1 class="text-white fs-1">${music.name}</h1>
+        <p class="text-white">${music.nb_fan} ascoltatori mensili</p>
     </div>
 </div>`
 }

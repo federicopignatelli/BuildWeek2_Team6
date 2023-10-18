@@ -103,9 +103,11 @@ const renderAlbumHome = function (obj) {
     <div
     class="card-body p-0 ps-2 pt-3 d-flex align-items-center justify-content-between"
     >
+    <a href="artist.html?artistid=${obj.data[i].artist.id}">
     <p class="card-text text-white">
     ${obj.data[randomNum].album.title}
     </p>
+    </a>
     <figure class="effect-sadie">
     <figcaption>
     <a href="#"
@@ -126,6 +128,7 @@ const renderAlbumHome = function (obj) {
   }
 };
 
+console.log(renderAlbumHome)
 //   qui creiamo seconde card
 const getSearchHome2 = async function () {
   try {
