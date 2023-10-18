@@ -1,7 +1,8 @@
 const navbar = document.getElementById("navbar")
 const nameAlbum = document.getElementById("nameAlbum")
 const cardContainer = document.getElementById("card-container")
-const albumNavbar = document.createElement("span")
+const albumNavbar = document.createElement("div")
+const rightNavIcon = document.getElementById("left-icons-navbar")
 
 
 
@@ -83,7 +84,8 @@ const songs = (obj1) => {
     albumNavbar.style.fontSize = "12px"
     albumNavbar.style.opacity = "0"
     albumNavbar.classList.add("ms-3")
-    navbar.appendChild(albumNavbar)
+
+    rightNavIcon.appendChild(albumNavbar)
 
     header(obj1)
 
