@@ -1,3 +1,25 @@
+const address = new URLSearchParams(location.search)
+const artistId = address.get('artistid')
+console.log(artistId)
+
+fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
+    .then((res) => {
+        console.log('ok', res)
+        if (res.ok) {
+            return res.json()
+        }
+        else {
+            throw new Error('ce un errore')
+        }
+    })
+    .then(music => {
+        console.log('music', music)
+        renderMusic(music)
+    })
+
+    .catch(err => {
+        console.log('err', err)
+    })
 
 
 const renderMusic = function (data) {
@@ -37,14 +59,12 @@ const renderMusic = function (data) {
     });
 }
 
-const address = new URLSearchParams(location.search)
-const artistId = address.get('artistid')
-console.log(artistId)
+
 
 const getInfoByArtist = function () { //qua capire come comporre il link
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
-        //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId + 'top')
-        //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
+    // fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
+    //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId + 'top')
+    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
         .then((res) => {
             console.log('ok', res)
             if (res.ok) {
@@ -59,7 +79,7 @@ const getInfoByArtist = function () { //qua capire come comporre il link
 
             renderCover(music)
             renderIconLiked(music)
-            renderMusic(music)
+
         })
 
         .catch(err => {
