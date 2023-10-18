@@ -90,7 +90,7 @@ const renderAlbumHome = function (obj) {
     col.classList.add("col-6", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
     col.innerHTML = `
-    <div class="card mb-3 bg-black rounded-1">
+    <div class="card mb-3 sfondo-bottom rounded-1">
     <div class="row g-0 d-flex align-items-center" id="hover">
     <div class="col-md-4 rounded-1" style="width: 70px">
     <img
@@ -153,7 +153,7 @@ const render2 = function (obj) {
     col.classList.add("col-6", "col-lg-3", "col-md-4");
 
     const randomNum = Math.round(Math.random() * 25);
-    col.innerHTML = ` <div class="card bg-black text-white my-2">
+    col.innerHTML = ` <div class="card sfondo-bottom text-white my-2">
     <img
       src="${obj.data[randomNum].artist.picture_medium}"
       class="card-img-top  p-3"
@@ -193,7 +193,7 @@ const render3 = function (obj) {
     const col = document.createElement("div");
     col.classList.add("col-6", "col-lg-3", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
-    col.innerHTML = ` <div class="card bg-black text-white my-2">
+    col.innerHTML = ` <div class="card sfondo-bottom text-white my-2">
     <img
       src="${obj.data[randomNum].artist.picture_medium}"
       class="card-img-top  p-3"
@@ -233,7 +233,7 @@ const render4 = function (obj) {
     const col = document.createElement("div");
     col.classList.add("col-6", "col-lg-3", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
-    col.innerHTML = ` <div class="card bg-black text-white my-2" >
+    col.innerHTML = ` <div class="card sfondo-bottom text-white my-2" >
     <img
       src="${obj.data[randomNum].artist.picture_medium}"
       class="card-img-top p-3"
