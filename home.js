@@ -90,22 +90,23 @@ const renderAlbumHome = function (obj) {
     col.classList.add("col-6", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
     col.innerHTML = `
-    <div class="card mb-3 sfondo-bottom rounded-1">
+    <div class="card mb-3 bg-dark bg-gradient-50 rounded-1">
     <div class="row g-0 d-flex align-items-center" id="hover">
-    <div class="col-md-4 rounded-1" style="width: 70px">
+    <div class=" col-3 rounded-1" style="width: 70px">
     <img
-    src= "${obj.data[randomNum].artist.picture_medium}"
+    src= "${obj.data[randomNum].album.cover_medium}"
     class="img-fluid rounded-1"
     alt="..."
     style="height: 70px; width: 65px"/>
     </div>
-    <div class="col">
+    <div class="col-6">
     <div
-    class="card-body p-0 ps-2 pt-3 d-flex align-items-center justify-content-between"
+    class="card-body m-0 p-0 ps-1 pt-2 d-flex align-items-center justify-content-between"
     >
-    <p class="card-text text-white">
+    <p class="card-text text-white text-truncate overflow-hidden text-nowrap">
     ${obj.data[randomNum].album.title}
     </p>
+    <div class="col-3" style="position: relative;">
     <figure class="effect-sadie">
     <figcaption>
     <a href="#"
@@ -116,6 +117,7 @@ const renderAlbumHome = function (obj) {
     ></a>
     </figcaption>
     </figure>
+    </div>
     </div>
     </div>
     </div>
