@@ -60,6 +60,7 @@ p {
 #playback-bar {
   display: flex;
   align-items: center;
+  width: 500px;
 }
 
 #volume-bar {
@@ -79,10 +80,15 @@ p {
 
 #playback-bar input {
   margin-top: 0.5em;
+  flex-grow: 1;
 }
 
 #playback-bar div span {
   color: white;
   font-size: 13px;
   margin: 0.5em;
+}
+
+#play-pause {
+  display: flex;
 }
