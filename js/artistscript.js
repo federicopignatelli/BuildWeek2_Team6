@@ -2,6 +2,8 @@ const address = new URLSearchParams(location.search)
 const artistId = address.get('artistid')
 console.log(artistId)
 
+
+
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
     .then((res) => {
         console.log('ok', res)
@@ -15,6 +17,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     .then(music => {
         console.log('music', music)
         renderMusic(music)
+        renderMusic2(music)
     })
 
     .catch(err => {
@@ -38,13 +41,13 @@ const renderMusic = function (song) {
     <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
         style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
       <div class="row flex-column flex-md-row">
-          <div class="col col-8">
+          <div class="col col-6">
             <p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p>
           </div>
-          <div class="col col-2">
+          <div class="col col-3">
             <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
           </div>
-          <div class="col col-2 d-none d-md-flex ps-2">
+          <div class="col col-3 d-none d-md-flex ps-2">
             <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].duration}</p>
           </div>
       </div>
@@ -58,6 +61,45 @@ const renderMusic = function (song) {
 
     };
 }
+
+
+const renderMusic2 = function (song) {
+    const musicContainer = document.getElementById('altro')
+
+    for (let i = 5; i < 10; i++) {
+        const newRow = document.createElement('div')
+        newRow.classList.add('row', 'mb-3')
+
+        newRow.innerHTML = `<div class="col col-1">
+        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
+    </div>
+    <div class="col col-3 col-md-3 col-lg-2 col-xxl-1">
+        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
+    </div>
+    <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
+        style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
+      <div class="row flex-column flex-md-row">
+          <div class="col col-6">
+            <p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p>
+          </div>
+          <div class="col col-3">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
+          </div>
+          <div class="col col-3 d-none d-md-flex ps-2">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].duration}</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col col-1 pt-3 ps-1">
+        <i class="bi bi-three-dots-vertical text-white"></i>
+    </div>`
+
+        musicContainer.appendChild(newRow)
+
+    };
+}
+
 
 const getInfoByArtist = function () { //qua capire come comporre il link
     // fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
@@ -89,11 +131,11 @@ getInfoByArtist()
 
 const renderCover = function (music) {
     const rowcover = document.getElementById('header-artist')
-    rowcover.innerHTML = `<div class="col col-12 p-0 m-0 d-flex justify-content-center bg-dark" 
-                     style="position: relative; max-height: 60vh;">
+    rowcover.innerHTML = `<div class="col col-12 p-0 m-0 d-flex justify-content-center bg-black" 
+                     style="position: relative; height: 50vh;">
 
     <img src="${music.picture_xl}" alt="imgartist"
-        style="opacity: 0.6; width: 100%; max-height: 100%; box-sizing: container;">
+        style="opacity: 0.6; width: 100%; object-fit: cover; object-position: 0 -50px;">
 
     <div class="col col-11" style="position: absolute; bottom: 10px; left: 25px;">
         <h1 class="text-white fs-1">${music.name}</h1>
