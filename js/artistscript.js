@@ -42,7 +42,7 @@ const artistId = address.get('artistid')
 console.log(artistId)
 
 const getInfoByArtist = function () { //qua capire come comporre il link
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50')
+    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
         //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId + 'top')
         //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
         .then((res) => {
