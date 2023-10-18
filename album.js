@@ -140,7 +140,7 @@ const songs = (obj1) => {
         <div class="d-none d-md-flex col-1 flex-column justify-content-center opacity-50" style="font-size:12px">${objData.rank}</div>
 
         <div class="col-3 text-end d-flex flex-column justify-content-center">
-        <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.round(objData.duration/60)}:${objData.duration%60}</span>
+        <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.floor(objData.duration/60)}:${objData.duration%60}</span>
         <a class="text-light btn fs-5 border-0 d-md-none" href=""><i class="bi bi-three-dots-vertical"></i></a>
         </div>
         `
