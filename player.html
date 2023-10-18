@@ -11,14 +11,14 @@
   <body>
     <div id="container">
       <div id="brano">
-        <div>
+        <!-- <div>
           <img src="assets/imgs/main/image-3.jpg" alt="" />
         </div>
         <div>
           <h5>Fat Funny Friend</h5>
           <p>Meddie Zahm</p>
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <button
             aria-checked="false"
             data-testid="add-button"
@@ -45,13 +45,17 @@
                 ></path></svg
             ></span>
           </button>
-        </div>
+        </div> -->
       </div>
       <div id="center-bar">
         <div id="player">
           <div id="icon-player">
             <button
-              style="--button-size: 32px"
+              style="
+                --button-size: 32px;
+                fill: hsla(0, 0%, 100%, 0.7);
+                fill: hsla(0, 0%, 100%, 0.7);
+              "
               class="KVKoQ3u4JpKTvSSFtd6J"
               role="switch"
               aria-checked="false"
@@ -76,7 +80,7 @@
               </svg>
             </button>
             <button
-              style="--button-size: 32px"
+              style="--button-size: 32px; fill: hsla(0, 0%, 100%, 0.7)"
               class="fn72ari9aEmKo4JcwteT"
               aria-label="Indietro"
               data-testid="control-button-skip-back"
@@ -95,11 +99,17 @@
                 ></path>
               </svg>
             </button>
+          </div>
+          <div>
             <button
-              style="--button-size: 32px"
+              style="
+                --button-size: 32px;
+                fill: black;
+              "
               class="vnCew8qzJq3cVGlYFXRI"
               aria-label="Play"
               data-testid="control-button-playpause"
+              id="play"
             >
               <svg
                 role="img"
@@ -116,10 +126,11 @@
               </svg>
             </button>
             <button
-              style="--button-size: 32px"
+              style="--button-size: 32px; fill: black; display: none;"
               class="vnCew8qzJq3cVGlYFXRI"
               aria-label="Pausa"
               data-testid="control-button-playpause"
+              id="pause"
             >
               <svg
                 role="img"
@@ -136,10 +147,9 @@
               </svg>
             </button>
           </div>
-
           <div>
             <button
-              style="--button-size: 32px"
+              style="--button-size: 32px; fill: hsla(0, 0%, 100%, 0.7)""
               class="mnipjT4SLDMgwiDCEnRC"
               aria-label="Avanti"
               data-testid="control-button-skip-forward"
@@ -159,7 +169,7 @@
               </svg>
             </button>
             <button
-              style="--button-size: 32px"
+              style="--button-size: 32px; fill: hsla(0, 0%, 100%, 0.7)"
               class="Vz6yjzttS0YlLcwrkoUR"
               role="checkbox"
               aria-checked="false"
@@ -180,8 +190,6 @@
                 ></path>
               </svg>
             </button>
-            <a href="#"><i class="fas fa-pause-circle"></i></a>
-            <a href="#"><i class="fas fa-angle-double-right"></i></a>
           </div>
         </div>
         <div id="playback-bar">
@@ -194,6 +202,7 @@
             aria-valuetext="0:00/4:50"
             value="0"
             width="200px"
+            id="peppa-pig"
           />
           <div><span>0:50</span></div>
         </div>
@@ -201,6 +210,7 @@
       <div id="volume-bar">
         <div id="icon-volBar">
           <button
+            style="fill: hsla(0, 0%, 100%, 0.7)"
             class="Button-sc-1dqy6lx-0 feKImU KAZD28usA1vPz5GVpm63"
             data-testid="control-button-npv"
             data-active="false"
@@ -231,6 +241,7 @@
             data-active="false"
             aria-label="Lyrics"
             data-encore-id="buttonTertiary"
+            style="fill: hsla(0, 0%, 100%, 0.7)"
           >
             <span
               aria-hidden="true"
@@ -255,6 +266,7 @@
             data-active="false"
             aria-label="Coda"
             data-encore-id="buttonTertiary"
+            style="fill: hsla(0, 0%, 100%, 0.7)"
           >
             <span
               aria-hidden="true"
@@ -278,6 +290,7 @@
             aria-label="Connetti a un dispositivo"
             aria-expanded="false"
             id="device-picker-icon-button"
+            style="fill: hsla(0, 0%, 100%, 0.7)"
           >
             <svg
               role="presentation"
@@ -302,6 +315,7 @@
               aria-label="Disattiva audio"
               aria-describedby="volume-icon"
               data-testid="volume-bar-toggle-mute-button"
+              style="fill: hsla(0, 0%, 100%, 0.7)"
             >
               <svg
                 role="presentation"
@@ -331,6 +345,7 @@
               data-active="false"
               aria-label="Schermo intero"
               data-encore-id="buttonTertiary"
+              style="fill: hsla(0, 0%, 100%, 0.7)"
             >
               <span
                 aria-hidden="true"
@@ -353,5 +368,7 @@
         </div>
       </div>
     </div>
+    <audio src="" id="audio"></audio>
+    <script src="player.js"></script>
   </body>
 </html>
