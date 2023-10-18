@@ -103,11 +103,9 @@ const renderAlbumHome = function (obj) {
     <div
     class="card-body p-0 ps-2 pt-3 d-flex align-items-center justify-content-between"
     >
-    <a href="artist.html?artistid=${obj.data[i].artist.id}">
     <p class="card-text text-white">
     ${obj.data[randomNum].album.title}
     </p>
-    </a>
     <figure class="effect-sadie">
     <figcaption>
     <a href="#"
@@ -164,7 +162,9 @@ const render2 = function (obj) {
     />
     <div class="card-body">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
+      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
       <p class="card-text text-truncate overflow-hidden">${obj.data[randomNum].artist.name}</p>
+      </a>
     </div>
   </div>`;
     row.appendChild(col);
@@ -204,7 +204,9 @@ const render3 = function (obj) {
     />
     <div class="card-body">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
-      <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
+      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
+     <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
+     </a>
     </div>
   </div>`;
     row.appendChild(col);
@@ -244,7 +246,9 @@ const render4 = function (obj) {
     />
     <div class="card-body">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
+      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
       <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
+      </a>
     </div>
   </div>`;
     row.appendChild(col);

@@ -22,10 +22,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     })
 
 
-const renderMusic = function (data) {
+const renderMusic = function (song) {
     const musicContainer = document.getElementById('PopularMusic')
 
-    data.data.forEach((song, i) => {  //qui da vedere il collegamento
+    for (let i = 0; i < 5; i++) {
         const newRow = document.createElement('div')
         newRow.classList.add('row', 'mb-3')
 
@@ -33,19 +33,19 @@ const renderMusic = function (data) {
         <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
     </div>
     <div class="col col-3 col-md-3 col-lg-2 col-xxl-1">
-        <img src="${song.album.cover_small}" alt="img" width="55px">
+        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
     </div>
     <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
         style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
       <div class="row flex-column flex-md-row">
           <div class="col col-8">
-            <p class="text-white text-truncate overflow-hidden text-nowrap">${song.title}</p>
+            <p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p>
           </div>
           <div class="col col-2">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.rank}</p>
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
           </div>
           <div class="col col-2 d-none d-md-flex ps-2">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.duration}</p>
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].duration}</p>
           </div>
       </div>
     </div>
@@ -56,10 +56,8 @@ const renderMusic = function (data) {
 
         musicContainer.appendChild(newRow)
 
-    });
+    };
 }
-
-
 
 const getInfoByArtist = function () { //qua capire come comporre il link
     // fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
