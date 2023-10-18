@@ -38,3 +38,12 @@ figure.effect-sadie:hover i {
 #none:nth-of-type(4) {
   display: none;
 }
+
+footer {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 55%
+  );
+}
