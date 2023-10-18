@@ -17,16 +17,27 @@ const getMusicByArtist = function () {
         })
         .then(music => {
             console.log('music', music)
-            renderMusic(music)
+            renderCover(music)
         })
 
         .catch(err => {
             console.log('err', err)
         })
 }
-
 getMusicByArtist()
 
-const renderMusic = function () {
-
+const renderCover = function (data) {
+    const rowcover = document.getElementById('header-artist')
+    rowcover.innerHTML = `
+    <div class="col col-12 p-0 m-0" style="position: relative; max-height: 60vh;">
+                <img src="${data.picture_xl}" alt="imgartist"
+                    style="opacity: 0.6; width: 100%; max-width: 100%; max-height: 100%;">
+                <div class="col col-11" style="position: absolute; bottom: 10px; left: 25px;">
+                    <h1 class="text-white fs-1">${data.name}</h1>
+                    <p class="text-white">${data.nb_fan} ascoltatori mensili</p>
+                </div>
+            </div>`
 }
+
+
+
