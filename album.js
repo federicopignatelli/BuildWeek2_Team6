@@ -19,14 +19,14 @@ const header = (obj1) => {
     header.innerHTML = `
     <div class="d-none d-md-flex mt-3 mx-2">
 
-    <div class="col-3 col-xl-2">
+    <div class="col-3 col-xl-2 d-flex align-items-end">
     <img src="${obj1.cover_xl}" alt="album-image" class="w-100" id="main-album-img">
     </div>
 
     <div class="col-9 d-flex flex-column justify-content-end ms-4">
 
     <span class="fw-bold" style="font-size:10px;">ALBUM</span>
-    <h1 class="" style="font-size:40px; font-weight:900">${obj1.title}</h1>
+    <h1 class="" style="font-size:35px; font-weight:900">${obj1.title}</h1>
 
     <p class="align-middle mb-0 fw-normal" style="font-size:14px">
 
@@ -40,6 +40,8 @@ const header = (obj1) => {
     </p>
 
     </div>
+
+
 
     </div>
     <div class="d-flex d-md-none justify-content-center">
@@ -59,13 +61,13 @@ const header = (obj1) => {
     </div>
     `
     iconBar.innerHTML = `
-    <div class="">
+    <div class="d-md-none">
     <a class="text-light border-0 btn fs-5"><i class="bi bi-heart"></i></a>
     <a class="text-light border-0 btn fs-5"><i class="bi bi-arrow-down-circle"></i></a>
     <a class="text-light border-0 btn fs-5"><i class="bi bi-three-dots-vertical"></i></a>
     </div>
 
-    <div>
+    <div class="d-md-none">
     <a class="text-light border-0 btn fs-5"><i class="bi bi-shuffle"></i></a>
     <a class="text-light border-0 btn bg-success rounded-circle py-2 px-2"
         style="font-size: 25px;"><i class="bi bi-play-fill d-flex"></i></a>
@@ -102,7 +104,8 @@ const songs = (obj1) => {
 
         <div>
 
-        <a class="text-light btn fs-5 border-0" href=""><i class="bi bi-three-dots-vertical"></i></a>
+        <span>${Math.round(objData.duration/60)}:${objData.duration%60}</span>
+        <a class="text-light btn fs-5 border-0 d-md-none" href=""><i class="bi bi-three-dots-vertical"></i></a>
 
         </div>
         `

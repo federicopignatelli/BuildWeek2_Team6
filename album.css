@@ -1,6 +1,12 @@
 body {
     font-family: "Circular", sans-serif !important;
     font-size: 20px !important;
+    /* height:100% !important; */
+    margin: 0px !important;
+    /* background-color: black !important; */
+}
+
+#central-section {
     background: rgb(196, 141, 43);
     background: linear-gradient(180deg, rgb(156, 111, 34) 0%, rgba(0, 0, 0, 1) 67%);
     background-attachment: fixed;
@@ -32,8 +38,7 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 55%);
     opacity:100% !important;
     transition: all 0.6s;
 }
-
-.col.col-3.pe-0.d-none.d-md-block.vh-100.overflow-auto.position-fixed.z-3 {
+body:first-of-type {
     font-size: 14px !important;
 }
 
