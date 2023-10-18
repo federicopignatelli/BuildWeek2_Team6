@@ -3,6 +3,8 @@ const nameAlbum = document.getElementById("nameAlbum")
 const cardContainer = document.getElementById("card-container")
 const albumNavbar = document.createElement("div")
 const rightNavIcon = document.getElementById("left-icons-navbar")
+const barraIconeMedium = document.getElementById("barra-pulsanti")
+const agendaSongs = document.getElementById("agenda-songs")
 
 
 
@@ -91,22 +93,55 @@ const songs = (obj1) => {
 
     header(obj1)
 
-    obj1.tracks.data.forEach((objData) => {
+    barraIconeMedium.innerHTML = `
+    <a class="text-light border-0 btn bg-success rounded-circle p-2 me-2"
+        style="font-size: 25px;"><i class="bi bi-play-fill d-flex"></i></a>
+        <a class="text-light border-0 btn fs-5"><i class="bi bi-heart"></i></a>
+        <a class="text-light border-0 btn fs-5"><i class="bi bi-arrow-down-circle"></i></a>
+        <a class="text-light border-0 btn fs-5"><i class="bi bi-three-dots"></i></a>
+    `
+
+    agendaSongs.innerHTML = `
+    <div class="row border-bottom opacity-50 mb-3 pb-1" style="font-size:12px;">
+    
+    <div class="col-7">
+
+        <span class="me-2">#</span>
+
+        <span class="">TITOLO</span>
+
+    </div>
+
+    <div class="col-3 text-center">RIPRODUZIONI</div>
+    
+    <div class="col-2 text-end"><i class="bi bi-clock"></i></div>
+    
+    </div>
+    `
+
+    obj1.tracks.data.forEach((objData, i) => {
 
         const cardSong = document.createElement("div")
-        cardSong.classList.add("d-flex", "justify-content-between")
+        cardSong.classList.add("d-flex", "justify-content-between", "mb-3", "row")
         cardSong.innerHTML = `
-        <div>
+        <div class="d-flex align-items-center col-8">
+
+        <div class="d-none d-md-inline pe-3 opacity-50" style="font-size:12px">
+        ${i+1}
+        </div>
+
+        <div class="">
         <a class="btn text-start p-0 text-light border-0" href=""><h6 class="fw-bold mb-0">${objData.title}</h6></a>
-        <p class="" style="font-size:12px">${objData.artist.name}</p>
+        <p class="m-0 opacity-50" style="font-size:12px">${objData.artist.name}</p>
+        </div>
 
         </div>
 
-        <div>
+        <div class="d-none d-md-flex col-1 flex-column justify-content-center opacity-50" style="font-size:12px">${objData.rank}</div>
 
-        <span>${Math.round(objData.duration/60)}:${objData.duration%60}</span>
+        <div class="col-3 text-end d-flex flex-column justify-content-center">
+        <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.round(objData.duration/60)}:${objData.duration%60}</span>
         <a class="text-light btn fs-5 border-0 d-md-none" href=""><i class="bi bi-three-dots-vertical"></i></a>
-
         </div>
         `
         cardContainer.appendChild(cardSong)
