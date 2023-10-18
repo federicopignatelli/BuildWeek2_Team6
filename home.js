@@ -21,10 +21,10 @@ const renderBanner = function (obj) {
   const row = document.getElementById("banner-row");
   for (let i = 0; i < 1; i++) {
     const randomNum = Math.round(Math.random() * 25);
-    row.innerHTML = `  <div class="col-lg-3">
+    row.innerHTML = `  <div class="col-md-3">
         <img src=${obj.data[randomNum].artist.picture_medium} class="w-100" />
       </div>
-      <div class="col-lg-5">
+      <div class="col-md-5">
         <p class="text-white">ALBUM</p>
         <h1 class="text-white">${obj.data[randomNum].album.title}</h1>
         <p class="text-white">${obj.data[randomNum].artist.name}</p>
@@ -46,7 +46,7 @@ const renderBanner = function (obj) {
           <i class="bi bi-three-dots fs-3 text-white-50 ms-3"></i>
         </div>
       </div>
-      <div class="col-4 p-0 d-flex align-items-start justify-content-end">
+      <div class="col-md-4 p-0 d-flex align-items-start justify-content-end">
         <button
           class="btn bg-black-50 text-white-50 w-50 px-0"
           style="font-size: 12px"
