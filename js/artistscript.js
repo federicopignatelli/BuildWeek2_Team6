@@ -56,7 +56,6 @@ const getInfoByArtist = function () { //qua capire come comporre il link
         })
         .then(music => {
             console.log('music', music)
-
             renderCover(music)
             renderIconLiked(music)
             renderMusic(music)
@@ -67,9 +66,6 @@ const getInfoByArtist = function () { //qua capire come comporre il link
         })
 }
 getInfoByArtist()
-
-
-
 
 
 
