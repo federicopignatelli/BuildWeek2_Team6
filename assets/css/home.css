@@ -1,0 +1,82 @@
+body {
+  font-family: "Circular" !important;
+}
+
+#sidebar-first ul li a:hover {
+  color: white !important;
+}
+
+#comments p {
+  font-size: 12px !important;
+}
+
+#first-card p {
+  font-size: 14px;
+}
+
+figure.effect-sadie figcaption::after,
+figure.effect-sadie i {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie i {
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover i {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#none:nth-of-type(4) {
+  display: none;
+}
+
+footer {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 55%
+  );
+}
+footer a:hover {
+  color: white !important;
+}
+.icon-side:hover {
+  color: white !important;
+}
+.sfondo-top {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 55%
+  );
+}
+.card {
+  border: none !important;
+}
+.sfondo-middle {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%
+  );
+}
+.sfondo-bottom {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 55%
+  );
+}
