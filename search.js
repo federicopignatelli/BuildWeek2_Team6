@@ -35,7 +35,7 @@ const search=function (query) {
 
 
       
-       cardSearch(data)
+      //  cardSearch(data)
 
      
         const row=document.getElementById("contenitore")

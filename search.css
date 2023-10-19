@@ -5,15 +5,16 @@ body{
 
 
 .imgSearch{
-    margin-left: 163px;
+    margin-left: 120px;
     transform: rotate(28deg);
-    border-radius: 30px;
-    width: 45%;
+    border-radius: 20px;
+    width: 40%;
     
 }
 
 .card{
     margin-bottom:  1.5rem;
+   
 }
 
 .card-body{
@@ -64,22 +65,31 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 55%);
 
 
 
-@media screen and (max-width:576px) {
+@media screen and (min-width:120px) and (max-width:767px) {
     .imgSearch{
-        margin-left: 110px;
+        margin-left: 159px;
+       
+    }
+    #sidebar-first{
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:999px) {
+   
+
+    .imgSearch{
+        margin-left: 1px
+        
     }
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:1000px) and (max-width:1200px) {
     .imgSearch{
-        margin-left: 76px
-    }
-}
-
-
-@media screen and (min-width:1200px) {
-    .imgSearch{
-        margin-left: 111px;
+        margin-left: 70px;
     }
 }
