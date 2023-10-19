@@ -5,6 +5,9 @@ const albumNavbar = document.createElement("div")
 const rightNavIcon = document.getElementById("left-icons-navbar")
 const barraIconeMedium = document.getElementById("barra-pulsanti")
 const agendaSongs = document.getElementById("agenda-songs")
+const peopleIconButton = document.getElementById("people-icon")
+const sidebar = document.getElementById("side-bar")
+const colMiddle = document.getElementById("col-middle")
 
 
 
@@ -182,3 +185,14 @@ window.addEventListener("scroll", () => {
         albumNavbar.style.opacity = "0"
     }
 })
+
+
+const removeSidebar = () => {   
+    peopleIconButton.addEventListener("click", () => {
+        sidebar.classList.toggle("d-md-flex")
+        colMiddle.classList.toggle("col-md-7")
+        colMiddle.classList.toggle("col-md-9")
+
+    })
+}
+removeSidebar()
