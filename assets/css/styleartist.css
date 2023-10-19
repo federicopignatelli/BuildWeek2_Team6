@@ -13,11 +13,7 @@ p {
 }
 
 .central-section {
-  background: rgb(149, 146, 146);
-  background: linear-gradient(
-    to bottom,
-    rgb(149, 146, 146) 0%,
-    rgba(0, 0, 0, 1) 77%
-  );
+  background: rgba(0, 0, 0, 1);
+  background: linear-gradient(to top, rgb(79, 79, 79) 0%, rgba(0, 0, 0, 1) 77%);
   background-attachment: fixed;
 }
