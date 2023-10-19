@@ -183,10 +183,8 @@ const render2 = function (obj) {
     <div class="card-body">
     <a class="text-decoration-none text-white" href="album.html?albumId=${obj.data[randomNum].album.id}">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
-<<<<<<< HEAD
-=======
       </a>
->>>>>>> Album-dettaglio-Home
+
       <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
       <p class="card-text text-truncate overflow-hidden">${obj.data[randomNum].artist.name}</p>
       </a>
@@ -281,12 +279,11 @@ const render4 = function (obj) {
     <div class="card-body">
     <a class="text-decoration-none text-white" href="album.html?albumId=${obj.data[randomNum].album.id}">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
-<<<<<<< HEAD
       <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
-=======
+
       </a>
       <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
->>>>>>> Album-dettaglio-Home
+
       <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
       </a>
     </div>
