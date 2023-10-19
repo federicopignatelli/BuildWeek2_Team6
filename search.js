@@ -60,3 +60,14 @@ formSearch.addEventListener('submit', function (e) {
   const bar = document.getElementById('inputField')
   const calcolo = bar.value
   search(calcolo)})
+
+
+
+
+  // const sidebar = document.getElementById("side-bar");
+  // const middle = document.getElementById("col-middle");
+  
+  // const funz = function () {
+  //   sidebar.classList.toggle("d-none");
+  //   middle.classList.toggle("col-lg-9");
+  // };
