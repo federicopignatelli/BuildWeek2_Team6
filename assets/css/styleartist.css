@@ -1,0 +1,19 @@
+body {
+  font-family: "Circular" !important;
+}
+
+h1 {
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+p {
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.central-section {
+  background: rgba(0, 0, 0, 1);
+  background: linear-gradient(to top, rgb(79, 79, 79) 0%, rgba(0, 0, 0, 1) 77%);
+  background-attachment: fixed;
+}
