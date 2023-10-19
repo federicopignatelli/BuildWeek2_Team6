@@ -22,13 +22,25 @@ const renderBanner = function (obj) {
   for (let i = 0; i < 1; i++) {
     const randomNum = Math.round(Math.random() * 25);
     row.innerHTML = `  <div class="col-md-3">
-        <img src=${obj.data[randomNum].artist.picture_medium} class="w-100" />
+        <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" class="text-decoration-none">
+    <img src=${obj.data[randomNum].artist.picture_medium} class="w-100" />
+    </a>
       </div>
       <div class="col-md-5">
         <p class="text-white">ALBUM</p>
+
+        <a href="album.html?albumId=${obj.data[randomNum].album.id}" class="text-decoration-none">
         <h1 class="text-white">${obj.data[randomNum].album.title}</h1>
+        </a>
+
+        <a class="text-decoration-none" href="artist.html?artistid=${obj.data[randomNum].artist.id}">
         <p class="text-white">${obj.data[randomNum].artist.name}</p>
-        <p class="text-white">Ascolta il nuovo singolo di ${obj.data[randomNum].artist.name}</p>
+        </a>
+
+        <p class="text-white">Ascolta il nuovo singolo di <a class="text-decoration-none text-white" href="artist.html?artistid=${obj.data[randomNum].artist.id}">
+        ${obj.data[randomNum].artist.name}
+        </a>
+        </p>
         <div class="col d-flex align-items-center">
           <button
             type="button"
@@ -93,18 +105,22 @@ const renderAlbumHome = function (obj) {
     <div class="card mb-3 bg-dark bg-gradient-50 rounded-1">
     <div class="row g-0 d-flex align-items-center" id="hover">
     <div class=" col-3 rounded-1" style="width: 70px">
+    <a class="text-decoration-none" href="album.html?albumId=${obj.data[randomNum].album.id}">
     <img
     src= "${obj.data[randomNum].album.cover_medium}"
     class="img-fluid rounded-1"
     alt="..."
     style="height: 70px; width: 65px"/>
+    </a>
     </div>
     <div class="col-6">
     <div
     class="card-body m-0 p-0 ps-1 pt-2 d-flex align-items-center justify-content-between"
     >
     <p class="card-text text-white text-truncate overflow-hidden text-nowrap">
+    <a class="text-decoration-none text-white" href="album.html?albumId=${obj.data[randomNum].album.id}">
     ${obj.data[randomNum].album.title}
+    </a>
     </p>
     <div class="col-3" style="position: relative;">
     <figure class="effect-sadie">
@@ -205,10 +221,15 @@ const render3 = function (obj) {
       alt="..."
     />
     <div class="card-body">
+
+      <a href="album.html?albumId=${obj.data[randomNum].album.id}" style="text-decoration: none; color: #fff;">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
-      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
+      </a>
+
+      <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
      <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
      </a>
+
     </div>
   </div>`;
     row.appendChild(col);
