@@ -8,9 +8,8 @@ const agendaSongs = document.getElementById("agenda-songs")
 
 
 
-// const addressBarContent = new URLSearchParams(location.search)
-// const albumId = addressBarContent.get("albumId")
-const albumId = "75621062"
+const addressBarContent = new URLSearchParams(location.search)
+const albumId = addressBarContent.get("albumId")
 
 const header = (obj1) => {
 
