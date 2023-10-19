@@ -186,13 +186,8 @@ window.addEventListener("scroll", () => {
     }
 })
 
-
 const removeSidebar = () => {   
-    peopleIconButton.addEventListener("click", () => {
         sidebar.classList.toggle("d-md-flex")
         colMiddle.classList.toggle("col-md-7")
         colMiddle.classList.toggle("col-md-9")
-
-    })
 }
-removeSidebar()

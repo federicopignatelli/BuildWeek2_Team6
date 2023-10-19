@@ -337,7 +337,7 @@
           >
             <a
               class="text-center offset-md-2 d-none text-end d-md-inline text-decoration-none text-light opacity-50 me-3 ms-0"
-              id="people-icon"
+              id="people-icon" onclick="removeSidebar()"
             >
               <i
                 class="bg-dark rounded-circle bi bi-people p-2 align-middle"
@@ -429,7 +429,7 @@
       </footer>
     </div>
 
-    <!-----------------------------------------------------------------  RIGHT BAR -->
+    <!-----------------------------------------------------------------------------------------------------------------------  RIGHT BAR -->
 
     <div
       class="d-none d-md-flex flex-column col-md-2 ps-0 pe-0 z-1 position-fixed top-0 end-0 h-100"
@@ -439,13 +439,13 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
           <p class="text-white mb-0">Attività amici</p>
           <div>
-            <a href="#" onclick="funz()" style="text-decoration: none">
+            <a style="text-decoration: none" id="sidebar-people-icon" onclick="removeSidebar()">
               <i
                 class="bi bi-people text-white-50 fs-5 px-3"
                 id="icona-sidebar"
               ></i>
             </a>
-            <a href="#" onclick="funz()" style="text-decoration: none">
+            <a style="text-decoration: none" id="x-icon" onclick="removeSidebar()">
               <i class="bi bi-x-lg text-white-50"></i>
             </a>
           </div>
