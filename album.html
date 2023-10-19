@@ -308,12 +308,12 @@
     <!------------------------------------------------------------------------------------------- SEZIONE CENTRALE -->
 
     <div
-      class="col-md-7 offset-md-3 pe-0 ps-md-0 h-100 central-section"
+      class="col-md-7 offset-md-3 ps-md-0 h-100 central-section px-0"
       style="min-height: 100vh"
       id="col-middle"
     >
-      <nav class="z-1 position-sticky top-0" id="">
-        <div class="d-flex row align-items-center" id="navbar">
+      <nav class="z-2 position-sticky top-0" id="">
+        <div class="d-flex row align-items-center mx-0" id="navbar">
           <div class="d-flex align-items-center col-9" id="left-icons-navbar">
             <a class="ms-4 fs-5 d-md-none btn p-0 border-0 text-light" href=""
               ><i class="bi bi-arrow-left"></i
@@ -337,8 +337,7 @@
           >
             <a
               class="text-center offset-md-2 d-none text-end d-md-inline text-decoration-none text-light opacity-50 me-3 ms-0"
-              id="people-icon"
-              href=""
+              id="people-icon" onclick="removeSidebar()"
             >
               <i
                 class="bg-dark rounded-circle bi bi-people p-2 align-middle"
@@ -383,17 +382,17 @@
       </nav>
 
       <div class="">
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center">
           <div class="spinner-border" role="status" id="spinner">
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
 
-        <header class="ps-3 pt-2" id="header">
+        <header class=" m-md-0 p-md-0" id="header">
           <!-- Qui andrà l'intestazione dell'album -->
         </header>
 
-        <div class="d-flex justify-content-between my-4 me-4" id="icon-bar">
+        <div class="d-flex justify-content-between my-4 mx-4" id="icon-bar">
           <!-- Icone centrali -->
         </div>
 
@@ -430,7 +429,7 @@
       </footer>
     </div>
 
-    <!-----------------------------------------------------------------  RIGHT BAR -->
+    <!-----------------------------------------------------------------------------------------------------------------------  RIGHT BAR -->
 
     <div
       class="d-none d-md-flex flex-column col-md-2 ps-0 pe-0 z-1 position-fixed top-0 end-0 h-100"
@@ -440,13 +439,13 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
           <p class="text-white mb-0">Attività amici</p>
           <div>
-            <a href="#" onclick="funz()" style="text-decoration: none">
+            <a style="text-decoration: none" id="sidebar-people-icon" onclick="removeSidebar()">
               <i
                 class="bi bi-people text-white-50 fs-5 px-3"
                 id="icona-sidebar"
               ></i>
             </a>
-            <a href="#" onclick="funz()" style="text-decoration: none">
+            <a style="text-decoration: none" id="x-icon" onclick="removeSidebar()">
               <i class="bi bi-x-lg text-white-50"></i>
             </a>
           </div>

@@ -173,13 +173,20 @@ const render2 = function (obj) {
 
     const randomNum = Math.round(Math.random() * 25);
     col.innerHTML = ` <div class="card sfondo-bottom text-white my-2">
+    <a class="text-decoration-none" href="artist.html?artistid=${obj.data[randomNum].artist.id}">
     <img
       src="${obj.data[randomNum].artist.picture_medium}"
       class="card-img-top  p-3"
       alt="..."
     />
+    </a>
     <div class="card-body">
+    <a class="text-decoration-none text-white" href="album.html?albumId=${obj.data[randomNum].album.id}">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
+<<<<<<< HEAD
+=======
+      </a>
+>>>>>>> Album-dettaglio-Home
       <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
       <p class="card-text text-truncate overflow-hidden">${obj.data[randomNum].artist.name}</p>
       </a>
@@ -215,11 +222,13 @@ const render3 = function (obj) {
     col.classList.add("col-6", "col-lg-3", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
     col.innerHTML = ` <div class="card sfondo-bottom text-white my-2">
+    <a class="text-decoration-none" href="album.html?albumId=${obj.data[randomNum].album.id}">
     <img
-      src="${obj.data[randomNum].artist.picture_medium}"
+      src="${obj.data[randomNum].album.cover_medium}"
       class="card-img-top  p-3"
       alt="..."
     />
+    </a>
     <div class="card-body">
 
       <a href="album.html?albumId=${obj.data[randomNum].album.id}" style="text-decoration: none; color: #fff;">
@@ -262,14 +271,22 @@ const render4 = function (obj) {
     col.classList.add("col-6", "col-lg-3", "col-md-4");
     const randomNum = Math.round(Math.random() * 25);
     col.innerHTML = ` <div class="card sfondo-bottom text-white my-2" >
+    <a class="text-decoration-none" href="artist.html?artistid=${obj.data[randomNum].artist.id}">
     <img
       src="${obj.data[randomNum].artist.picture_medium}"
       class="card-img-top p-3"
       alt="..."
     />
+    </a>
     <div class="card-body">
+    <a class="text-decoration-none text-white" href="album.html?albumId=${obj.data[randomNum].album.id}">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
+<<<<<<< HEAD
       <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
+=======
+      </a>
+      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
+>>>>>>> Album-dettaglio-Home
       <p class="card-text text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].artist.name}</p>
       </a>
     </div>
@@ -277,3 +294,4 @@ const render4 = function (obj) {
     row.appendChild(col);
   }
 };
+
