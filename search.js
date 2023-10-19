@@ -72,6 +72,6 @@ const sidebar = document.getElementById("side-bar");
 const middle = document.getElementById("col-middle");
   
 const funz = function () {
-    sidebar.classList.toggle("d-none");
+    sidebar.classList.toggle("d-md-none");
     middle.classList.toggle("col-lg-9");
 };
