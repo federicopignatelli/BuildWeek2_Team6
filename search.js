@@ -64,10 +64,14 @@ formSearch.addEventListener('submit', function (e) {
 
 
 
-  // const sidebar = document.getElementById("side-bar");
-  // const middle = document.getElementById("col-middle");
   
-  // const funz = function () {
-  //   sidebar.classList.toggle("d-none");
-  //   middle.classList.toggle("col-lg-9");
-  // };
+  
+  
+  
+const sidebar = document.getElementById("side-bar");
+const middle = document.getElementById("col-middle");
+  
+const funz = function () {
+    sidebar.classList.toggle("d-none");
+    middle.classList.toggle("col-lg-9");
+};
