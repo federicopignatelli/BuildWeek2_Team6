@@ -21,16 +21,16 @@ const header = (obj1) => {
 
 
     header.innerHTML = `
-    <div class="d-none d-md-flex mt-3 mx-2">
+    <div class="d-none d-md-flex mt-3 mx-4 row">
 
-    <div class="col-3 col-xl-2 d-flex align-items-end">
+    <div class="col-4 d-flex align-items-end ps-0">
     <img src="${obj1.cover_xl}" alt="album-image" class="w-100" id="main-album-img">
     </div>
 
-    <div class="col-9 d-flex flex-column justify-content-end ms-4">
+    <div class="col-8 d-flex flex-column justify-content-end pe-0">
 
     <span class="fw-bold" style="font-size:10px;">ALBUM</span>
-    <h1 class="" style="font-size:35px; font-weight:900">${obj1.title}</h1>
+    <h1 class="" style="font-size:40px; font-weight:900">${obj1.title}</h1>
 
     <p class="align-middle mb-0 fw-normal" style="font-size:14px">
 
@@ -49,10 +49,10 @@ const header = (obj1) => {
 
     </div>
     <div class="d-flex d-md-none justify-content-center">
-    <img src="${obj1.cover_xl}" alt="album-image" class="w-50 mt-4" id="main-album-img">
+    <img src="${obj1.cover_xl}" alt="album-image" class="w-50 mt-md-4" id="main-album-img">
     </div>
     
-    <div class="my-2 d-md-none">
+    <div class="mx-4 d-md-none">
     
     <h2 class="mt-4">${obj1.title}</h2>
     
@@ -66,7 +66,7 @@ const header = (obj1) => {
     `
     iconBar.innerHTML = `
     <div class="d-md-none">
-    <a class="text-light border-0 btn fs-5"><i class="bi bi-heart"></i></a>
+    <a class="text-light border-0 btn fs-5 ps-0"><i class="bi bi-heart"></i></a>
     <a class="text-light border-0 btn fs-5"><i class="bi bi-arrow-down-circle"></i></a>
     <a class="text-light border-0 btn fs-5"><i class="bi bi-three-dots-vertical"></i></a>
     </div>
@@ -143,7 +143,7 @@ const songs = (obj1) => {
 
         <div class="col-3 text-end d-flex flex-column justify-content-center">
         <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.floor(objData.duration/60)}:${objData.duration%60}</span>
-        <a class="text-light btn fs-5 border-0 d-md-none" href=""><i class="bi bi-three-dots-vertical"></i></a>
+        <a class="text-light btn fs-5 border-0 d-md-none text-end px-0" href=""><i class="bi bi-three-dots-vertical"></i></a>
         </div>
         `
         cardContainer.appendChild(cardSong)
@@ -175,7 +175,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId)
 
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 160) {
+    if (window.scrollY > 140) {
         navbar.style.backgroundColor = "rgb(135, 111, 34)"
         navbar.style.boxShadow = "0px 0px 60px black"
         albumNavbar.style.opacity = "1"
