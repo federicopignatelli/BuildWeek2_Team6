@@ -48,7 +48,7 @@ const renderMusic = function (song) {
             <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
           </div>
           <div class="col col-3 d-none d-md-flex ps-2">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].duration}</p>
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${Math.floor(song.data[i].duration / 60)}:${song.data[i].duration % 60}</p>
           </div>
       </div>
     </div>
@@ -152,9 +152,8 @@ const renderIconLiked = function (data) {
                     <h3 class="text-white">Brani che ti piacciono</h3>
                 </div>
             </div>
-            <div class="row d-flex">
-                <div class="col col-12 d-flex ps-md-4">
-                    <div style="
+            <div class="d-flex">
+                    <div class="d-flex d-md-inline" style="
                     background-image: url('${data.picture_small}');
                     height: 68px;
                     width: 68px;
@@ -179,13 +178,16 @@ const renderIconLiked = function (data) {
                             </div>
                         </div>
                     </div>
-                    <div class="ms-4 pt-3 pt-md-4" style="line-height: 8px;">
+                    
+                    <div class="align-items-center d-md-flex" style="line-height: 8px;">
+                    
                         <p class="text-white d-md-none">Brani che ti piacciono
                         </p>
-                        <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">26 brani di ${data.name}
+                        <p class="text-white opacity-50 m-0 ms-2" style="font-weight: 300; font-size: 14px; line-height: 16px;">26 brani di ${data.name}
                         </p>
                     </div>
-                </div>
+                    
+                
             </div>`
 }
 
