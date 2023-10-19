@@ -287,3 +287,4 @@ const render4 = function (obj) {
     row.appendChild(col);
   }
 };
+

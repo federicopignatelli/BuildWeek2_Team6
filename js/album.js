@@ -36,10 +36,10 @@ const header = (obj1) => {
 
     <img class="rounded-circle" style="width:30px" src="${obj1.artist.picture_small}" alt="artist-icon">
     <a class="btn border-0 text-light ps-1 fw-bold pe-0 fw-bold" style="font-size:14px">${obj1.artist.name}</a>
-    <span class="align-middle" style="font-size:14px" id="anno-album">· ${obj1.release_date.slice(0,4)} · </span>
+    <span class="align-middle" style="font-size:14px" id="anno-album">· ${obj1.release_date.slice(0, 4)} · </span>
     <span class="">${obj1.nb_tracks} brani,</span>
-    <span class="opacity-50">${Math.round(obj1.duration/60)} min</span>
-    <span class="opacity-50">${obj1.duration%60} sec.</span>
+    <span class="opacity-50">${Math.round(obj1.duration / 60)} min</span>
+    <span class="opacity-50">${obj1.duration % 60} sec.</span>
 
     </p>
 
@@ -59,7 +59,7 @@ const header = (obj1) => {
     <div class="">
         <img class="rounded-circle" style="width:30px" src="${obj1.artist.picture_small}" alt="artist-icon">
         <a class="btn border-0 text-light ps-1 fw-bold" style="font-size:14px">${obj1.artist.name}</a>
-        <p class="my-3" style="font-size:12px">Album · <span id="anno-album">${obj1.release_date.slice(0,4)}</span></p>
+        <p class="my-3" style="font-size:12px">Album · <span id="anno-album">${obj1.release_date.slice(0, 4)}</span></p>
     </div>
     
     </div>
@@ -129,7 +129,7 @@ const songs = (obj1) => {
         <div class="d-flex align-items-center col-8">
 
         <div class="d-none d-md-inline pe-3 opacity-50" style="font-size:12px">
-        ${i+1}
+        ${i + 1}
         </div>
 
         <div class="">
@@ -142,7 +142,7 @@ const songs = (obj1) => {
         <div class="d-none d-md-flex col-1 flex-column justify-content-center opacity-50" style="font-size:12px">${objData.rank}</div>
 
         <div class="col-3 text-end d-flex flex-column justify-content-center">
-        <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.floor(objData.duration/60)}:${objData.duration%60}</span>
+        <span class="d-none d-md-inline opacity-50" style="font-size:12px">${Math.floor(objData.duration / 60)}:${objData.duration % 60}</span>
         <a class="text-light btn fs-5 border-0 d-md-none text-end px-0" href=""><i class="bi bi-three-dots-vertical"></i></a>
         </div>
         `
@@ -186,8 +186,8 @@ window.addEventListener("scroll", () => {
     }
 })
 
-const removeSidebar = () => {   
-        sidebar.classList.toggle("d-md-flex")
-        colMiddle.classList.toggle("col-md-7")
-        colMiddle.classList.toggle("col-md-9")
+const removeSidebar = () => {
+    sidebar.classList.toggle("d-md-flex")
+    colMiddle.classList.toggle("col-md-7")
+    colMiddle.classList.toggle("col-md-9")
 }
