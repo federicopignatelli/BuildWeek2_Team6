@@ -180,7 +180,7 @@ const render2 = function (obj) {
     />
     <div class="card-body">
       <h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[randomNum].album.title}</h5>
-      <a href="artist.html?artistid=${obj.data[i].artist.id}" style="text-decoration: none; color: #fff;">
+      <a href="artist.html?artistid=${obj.data[randomNum].artist.id}" style="text-decoration: none; color: #fff;">
       <p class="card-text text-truncate overflow-hidden">${obj.data[randomNum].artist.name}</p>
       </a>
     </div>
