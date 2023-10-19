@@ -2,7 +2,16 @@ const address = new URLSearchParams(location.search)
 const artistId = address.get('artistid')
 console.log(artistId)
 
+// qui mi prendo i riferimenti del dom per i tasti play e pause e progressbar
+const playBtn = document.getElementById('play')
+const pauseBtn = document.getElementById('pause')
+const audioDiv = document.getElementById('audio')
+const progressBar = document.getElementById('progressBar');
+const divPlay = document.getElementById('container')
 
+// creocostante audio con costrutto per il play
+const audio = new Audio();
+let isPlaying = false;
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
     .then((res) => {
@@ -18,101 +27,23 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
         console.log('music', music)
         renderMusic(music)
         renderMusic2(music)
-        smallCard(music)
-    })
-
-    .catch(err => {
-        console.log('err', err)
-    })
-
-
-const renderMusic = function (song) {
-    const musicContainer = document.getElementById('PopularMusic')
-
-    for (let i = 0; i < 5; i++) {
-        const newRow = document.createElement('div')
-        newRow.classList.add('row', 'mb-3')
-
-        newRow.innerHTML = `<div class="col col-1">
-        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
-    </div>
-    <div class="col col-3 col-md-3 col-lg-2 col-xxl-1">
-        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
-    </div>
-    <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
-        style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
-      <div class="row flex-column flex-md-row">
-          <div class="col col-6">
-            <p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p>
-          </div>
-          <div class="col col-3">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
-          </div>
-          <div class="col col-3 d-none d-md-flex ps-2">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].duration}</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col col-1 pt-3 ps-1">
-        <i class="bi bi-three-dots-vertical text-white"></i>
-    </div>`
-
-        musicContainer.appendChild(newRow)
-
-    };
-}
-
-
-const renderMusic2 = function (song) {
-    const musicContainer = document.getElementById('altro')
-
-    for (let i = 5; i < 10; i++) {
-        const newRow = document.createElement('div')
-        newRow.classList.add('row', 'mb-3')
-
-        newRow.innerHTML = `<div class="col col-1">
-        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
-    </div>
-    <div class="col col-3 col-md-3 col-lg-2 col-xxl-1">
-        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
-    </div>
-    <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
-        style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
-      <div class="row flex-column flex-md-row">
-          <div class="col col-6">
-            <a href="#" onclick="smallCard()"><p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p></a>
-          </div>
-          <div class="col col-3">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
-          </div>
-          <div class="col col-3 d-none d-md-flex ps-2">
-            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${Math.floor(song.data[i].duration / 60)}:${song.data[i].duration % 60}</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col col-1 pt-3 ps-1">
-        <i class="bi bi-three-dots-vertical text-white"></i>
-    </div>`
-
-        musicContainer.appendChild(newRow)
-
-    };
-}
-
-document.addEventListener('click', function smallCard(card) {
-    console.log('na merda')
-    const divFirst = document.getElementById('brano')
-    const div = document.createElement('div')
-    div.style.display = 'flex'
-    div.style.alignItems = 'center'
-    div.innerHTML = ` <div class="col-lg-3 flex-grow-1 ps-2">
-      <img src="${card.data[5].album.cover_medium}" alt="" />
+        const start = document.querySelectorAll('.clickTrack')
+        start.forEach((start1, index) => {
+            start1.addEventListener('click', () => {
+                console.log('na merda', start1)
+                const song = music.data[index]
+                console.log(song)
+                const divFirst = document.getElementById('brano')
+                const div = document.createElement('div')
+                div.style.display = 'flex'
+                div.style.alignItems = 'center'
+                divFirst.innerHTML = ''
+                div.innerHTML = ` <div class="col-lg-3 flex-grow-1 ps-2">
+      <img src="${song.album.cover_medium}" alt="" />
     </div>
     <div>
-      <h5>${card.data[5].album.title}</h5>
-      <p>${card.data[5].artist.name}</p>
+      <h6>${song.title}</h6>
+      <p>${song.artist.name}</p>
     </div>
     <div>
     <button
@@ -142,12 +73,123 @@ document.addEventListener('click', function smallCard(card) {
       ></span>
     </button>
   </div>`
-    divFirst.appendChild(div)
-})
+                divFirst.appendChild(div)
+
+                if (song && song.preview) {
+                    audio.src = song.preview;
+                    audio.play();
+                    playBtn.style.display = 'none'
+                    pauseBtn.style.display = 'block'
+                    isPlaying = true
+                    divPlay.classList.remove('d-none')
+                }
 
 
+            })
+        })
+        playBtn.addEventListener('click', () => {
+            if (!isPlaying) {
+                playBtn.style.display = 'none'
+                pauseBtn.style.display = 'block'
+                isPlaying = true
+                audio.play()
+            }
+        })
+        // funzione per il pause
+        pauseBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                playBtn.style.display = "block";
+                pauseBtn.style.display = "none";
+                isPlaying = false;
+                audio.pause();
+            }
+        });
 
-const getInfoByArtist = function () { //qua capire come comporre il link
+    })
+
+    .catch(err => {
+        console.log('err', err)
+    })
+
+// funzione per la prima parte tracklist popolari
+
+const renderMusic = function (song) {
+    const musicContainer = document.getElementById('PopularMusic')
+
+    for (let i = 0; i < 5; i++) {
+        const newRow = document.createElement('div')
+        newRow.classList.add('row', 'mb-3')
+
+        newRow.innerHTML = `<div class="col col-1 p-0">
+        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
+    </div>
+    <div class="col col-3 col-md-3 col-lg-2 col-xxl-1 p-0">
+        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
+    </div>
+    <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
+        style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
+      <div class="row flex-column flex-md-row">
+          <div class="col col-6">
+          <a href="#" class="clickTrack text-decoration-none"><p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p></a>
+          </div>
+          <div class="col col-3">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
+          </div>
+          <div class="col col-3 d-none d-md-flex ps-2">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${Math.floor(song.data[i].duration / 60)}:${song.data[i].duration % 60}</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col col-1 pt-3 ps-1">
+        <i class="bi bi-three-dots-vertical text-white"></i>
+    </div>`
+
+        musicContainer.appendChild(newRow)
+
+    };
+}
+
+// funzione per la seconda parte tracklist vedi altro
+const renderMusic2 = function (song) {
+    const musicContainer = document.getElementById('altro')
+
+    for (let i = 5; i < 10; i++) {
+        const newRow = document.createElement('div')
+        newRow.classList.add('row', 'mb-3', 'mt-3')
+
+        newRow.innerHTML = `<div class="col col-1 m-0 p-0">
+        <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
+    </div>
+    <div class="col col-3 col-md-3 col-lg-2 col-xxl-1 p-0">
+        <img src="${song.data[i].album.cover_small}" alt="img" width="55px">
+    </div>
+    <div class="col col-7 col-md-7 col-lg-8 col-xxl-9 ps-xxl-4"
+        style="line-height: 15px; padding-top: 12px; padding-left: 0px;">
+      <div class="row flex-column flex-md-row">
+          <div class="col col-6">
+            <a href="#" class="clickTrack text-decoration-none"><p class="text-white text-truncate overflow-hidden text-nowrap">${song.data[i].title}</p></a>
+          </div>
+          <div class="col col-3">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${song.data[i].rank}</p>
+          </div>
+          <div class="col col-3 d-none d-md-flex ps-2">
+            <p class="text-white opacity-50" style="font-weight: 300; font-size: 14px;">${Math.floor(song.data[i].duration / 60)}:${song.data[i].duration % 60}</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col col-1 pt-3 ps-1">
+        <i class="bi bi-three-dots-vertical text-white"></i>
+    </div>`
+
+        musicContainer.appendChild(newRow)
+
+    };
+}
+
+// questa è la fetch per la cover e le immagini
+const getInfoByArtist = function () {
     // fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/2/top?limit=50' + artistId)
     //fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId + 'top')
     fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
@@ -174,7 +216,7 @@ const getInfoByArtist = function () { //qua capire come comporre il link
 getInfoByArtist()
 
 
-
+// qui creiamo la parte dinamica della cover
 const renderCover = function (music) {
     const rowcover = document.getElementById('header-artist')
     rowcover.innerHTML = `<div class="col col-12 p-0 m-0 d-flex justify-content-center bg-black" 
@@ -190,6 +232,7 @@ const renderCover = function (music) {
 </div>`
 }
 
+// qui invece l'iconcina del like
 const renderIconLiked = function (data) {
     const containerliked = document.getElementById('musicliked')
     containerliked.innerHTML = `
@@ -236,13 +279,6 @@ const renderIconLiked = function (data) {
 }
 
 
-
-// const followButton = function () {
-//     const button = document.getElementById('followButton')
-//     button.addEventListener('click', function (e) {
-//         button.style.color = "#1DB954"
-//     })
-// }
 
 
 
