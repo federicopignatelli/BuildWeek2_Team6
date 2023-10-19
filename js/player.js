@@ -8,11 +8,11 @@ const audioDiv = document.getElementById('audio')
 
 // qui creiamo piccola card dinamica
 const smallCard = function (card) {
-    const divFirst = document.getElementById('brano')
-    const div = document.createElement('div')
-    div.style.display = 'flex'
-    div.style.alignItems = 'center'
-    div.innerHTML = ` <div>
+  const divFirst = document.getElementById('brano')
+  const div = document.createElement('div')
+  div.style.display = 'flex'
+  div.style.alignItems = 'center'
+  div.innerHTML = ` <div>
     <img src="${card.data[2].album.cover_medium}" alt="" />
   </div>
   <div>
@@ -47,43 +47,43 @@ const smallCard = function (card) {
     ></span>
   </button>
 </div>`
-    divFirst.appendChild(div)
+  divFirst.appendChild(div)
 }
 
 const audio = new Audio();
 let isPlaying = false;
 
 playBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-        playBtn.style.display = "none";
-        pauseBtn.style.display = "block";
-        isPlaying = true;
+  if (!isPlaying) {
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "block";
+    isPlaying = true;
 
-        // Effettua una richiesta all'API di Deezer
-        fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=lazza")
-            // fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + trackId)
-            .then(response => response.json())
-            .then(data => {
-                if (data.data && data.data[2] && data.data[2].preview) {
-                    audio.src = data.data[2].preview;
-                    audio.play();
-                }
-                console.log(data)
-                smallCard(data)
-            })
-            .catch(error => {
-                console.error("Errore durante la richiesta a Deezer:", error);
-            });
-    }
+    // Effettua una richiesta all'API di Deezer
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
+      // fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + trackId)
+      .then(response => response.json())
+      .then(data => {
+        if (data.data && data.data[2] && data.data[2].preview) {
+          audio.src = data.data[2].preview;
+          audio.play();
+        }
+        console.log(data)
+        smallCard(data)
+      })
+      .catch(error => {
+        console.error("Errore durante la richiesta a Deezer:", error);
+      });
+  }
 });
 
 pauseBtn.addEventListener("click", () => {
-    if (isPlaying) {
-        playBtn.style.display = "block";
-        pauseBtn.style.display = "none";
-        isPlaying = false;
-        audio.pause();
-    }
+  if (isPlaying) {
+    playBtn.style.display = "block";
+    pauseBtn.style.display = "none";
+    isPlaying = false;
+    audio.pause();
+  }
 });
 
 
