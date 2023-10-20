@@ -9,6 +9,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0.6em;
+  align-items: center;
+}
+
+#container svg {
+  margin-right: 0.5em;
 }
 
 #brano {
@@ -21,14 +26,14 @@ body {
   margin-right: 1.2em;
 }
 
-#brano h5,
+#brano h6,
 p {
   margin: 0;
   line-height: 1.2em;
   margin-right: 1.2em;
 }
 
-#brano h5 {
+#brano h6 {
   color: white;
 }
 
@@ -45,9 +50,11 @@ p {
 #play svg,
 #pause svg {
   background-color: white;
-  padding: 0.5em;
+  padding: 0.4em;
   border-radius: 20px;
   fill: black;
+  width: 28px;
+  height: 28px;
 }
 
 #center-bar {
@@ -92,6 +99,19 @@ p {
   color: white;
   font-size: 13px;
   margin: 0.5em;
+}
+
+@media screen and (max-width: 767px) {
+  #container {
+    position: fixed !important;
+    bottom: 60px !important;
+    background: rgb(0, 0, 0) !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 55%
+    ) !important;
+  }
 }
 
 /* #play-pause {

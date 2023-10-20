@@ -1,5 +1,6 @@
 body {
   font-family: "Circular" !important;
+  overflow-x: hidden;
 }
 
 #sidebar-first ul li a:hover {
@@ -48,25 +49,12 @@ figure.effect-sadie:hover i {
 
 footer {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 55%
-  );
 }
 footer a:hover {
   color: white !important;
 }
 .icon-side:hover {
   color: white !important;
-}
-.sfondo-top {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 55%
-  );
 }
 .card {
   border: none !important;
@@ -80,16 +68,12 @@ footer a:hover {
     rgba(0, 0, 0, 1) 55%
   );
 }
-.central-section {
-  background: rgb(149, 146, 146);
-  background: linear-gradient(
-    to bottom,
-    rgb(149, 146, 146) 0%,
-    rgba(0, 0, 0, 1) 77%
-  );
+.central-sections {
+  background: rgba(0, 0, 0, 1);
+  background: linear-gradient(to top, rgb(79, 79, 79) 0%, rgba(0, 0, 0, 1) 77%);
   background-attachment: fixed;
 }
 
-#comments p:hover{
+#comments p:hover {
   color: white !important;
 }
