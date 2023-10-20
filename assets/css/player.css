@@ -26,14 +26,14 @@ body {
   margin-right: 1.2em;
 }
 
-#brano h5,
+#brano h6,
 p {
   margin: 0;
   line-height: 1.2em;
   margin-right: 1.2em;
 }
 
-#brano h5 {
+#brano h6 {
   color: white;
 }
 
