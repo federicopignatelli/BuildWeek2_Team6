@@ -51,7 +51,6 @@ const search = function (query) {
        <p class="card-text text-truncate overflow-hidden">${data.data[randomNum].artist.name}</p>
      </div>
    </div>;`
-        console.log(data.data[randomNum].artist.picture_medium)
         row.appendChild(col);
       }
       const start = document.querySelectorAll('.clickTrack')
