@@ -64,7 +64,7 @@ const search = function (query) {
           div.style.display = 'flex'
           div.style.alignItems = 'center'
           divFirst.innerHTML = ''
-          div.innerHTML = ` <div class="col-lg-3 flex-grow-1 ps-2">
+          div.innerHTML = ` <div class="col-md-3 flex-grow-1 ps-2">
     <img src="${song.album.cover_medium}" alt="" />
   </div>
   <div>
