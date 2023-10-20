@@ -14,8 +14,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="assets/css/player.css">
-    <link rel="stylesheet" href="assets/css/search.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
     <link
       rel="icon"
       href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFh9NelOJZ-3v7BOte6c1nI5F83s4fIkKzCX3rBw-dEChWgkz3RoVQ0AekXm9qdHTsiJI&usqp=CAU"
@@ -30,7 +29,7 @@
       <div class="col col-3 d-sm-none d-md-block">
         <div
           style="position: sticky; top: 0"
-          class="flex-column flex-shrink-0 p-3 bg-black vh-100 d-sm-none d-md-block"
+          class="d-sm-none -0 p-3 bg-black vh-100 d-md-block"
           id="sidebar-first"
         >
           <ul class="nav nav-pills flex-column mb-auto">
@@ -409,16 +408,16 @@
             <h2 class="text-light text-center mb-3">Sfoglia Tutto</h2>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card bg-danger mb-4">
+              <div class="card bg-danger">
                 <div class="card-body">
-                  <a href="#"
-                    ><h5 onclick="cardSearch()" class="card-title text-light">
-                      Podcast
-                    </h5></a
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
                   >
+                    Podcast
+                  </h5>
+
                   <img
                     class="imgSearch"
-                    class="w-50"
                     src="/assets/imgs/search/image-2.jpg"
                     alt="imagine"
                   />
@@ -427,9 +426,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: darkblue">
+              <div class="card" style="background-color: darkblue">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Create per te</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Create per te
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-42.png"
@@ -440,12 +443,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(222, 20, 114)"
-              >
+              <div class="card" style="background-color: rgb(222, 20, 114)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Nuove uscite</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Nuove uscite
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-26.jpg"
@@ -458,7 +462,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: green">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Pop</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Pop
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-47.jpg"
@@ -469,9 +477,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(186, 88, 7)">
+              <div class="card" style="background-color: rgb(186, 88, 7)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Hip Hop</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Hip Hop
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-49.jpg"
@@ -484,7 +496,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card bg-danger">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Dance/Elettronica</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Elettronica
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-4.jpg"
@@ -495,12 +511,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(230, 46, 193)"
-              >
+              <div class="card" style="background-color: rgb(230, 46, 193)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Latina</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Latina
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-5.jpg"
@@ -513,7 +530,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(207, 88, 237)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Classifiche</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Classifiche
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-14.jpg"
@@ -524,12 +545,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(82, 137, 227)"
-              >
+              <div class="card" style="background-color: rgb(82, 137, 227)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Scopri</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Scopri
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-1.jpeg"
@@ -542,7 +564,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(166, 162, 55)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Pollen</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Pollen
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-3.jpg"
@@ -553,12 +579,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(126, 17, 128)"
-              >
+              <div class="card" style="background-color: rgb(126, 17, 128)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">RNB X</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    RNB X
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-6.jpg"
@@ -571,7 +598,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(247, 40, 74)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Rock</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Rock
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-7.jpg"
@@ -582,9 +613,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(13, 11, 11)">
+              <div class="card" style="background-color: rgb(13, 11, 11)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Allenamento</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Allenamento
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-8.jpg"
@@ -597,7 +632,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(99, 93, 93)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Written Ny Nija</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Nija
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-9.jpg"
@@ -610,7 +649,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(52, 177, 191)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Lo-Fi</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Lo-Fi
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-10.jpg"
@@ -621,13 +664,12 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(34, 141, 153)"
-              >
+              <div class="card" style="background-color: rgb(34, 141, 153)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">
-                    Songs to Sing in the Car
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Songs in the Car
                   </h5>
                   <img
                     class="imgSearch"
@@ -639,12 +681,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(242, 197, 48)"
-              >
+              <div class="card" style="background-color: rgb(242, 197, 48)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">All Out</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    All Out
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-12.jpg"
@@ -657,7 +700,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(250, 179, 12)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Your Summer Rewind</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Summer Rewind
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-13.jpeg"
@@ -668,9 +715,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(22, 96, 105)">
+              <div class="card" style="background-color: rgb(22, 96, 105)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Unlocking Us</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Unlocking Us
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-15.jpg"
@@ -683,7 +734,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(3, 37, 41)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Souge Louge</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Souge Louge
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-16.jpg"
@@ -696,7 +751,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card mb-4" style="background-color: rgb(10, 9, 38)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Stress Relief</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Relax
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-17.jpg"
@@ -709,7 +768,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(69, 67, 148)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Sleep</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Sleep
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-18.jpg"
@@ -722,7 +785,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(58, 212, 232)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Island Pop</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Island Pop
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-19.jpg"
@@ -733,9 +800,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(23, 25, 26)">
+              <div class="card" style="background-color: rgb(23, 25, 26)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Jazz</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Jazz
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-20.jpg"
@@ -748,7 +819,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(7, 27, 79)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Microfon</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Microfon
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-21.jpg"
@@ -759,12 +834,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(73, 108, 201)"
-              >
+              <div class="card" style="background-color: rgb(73, 108, 201)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Indigo</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Indigo
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-22.jpg"
@@ -775,9 +851,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(40, 14, 125)">
+              <div class="card" style="background-color: rgb(40, 14, 125)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Concentrazione</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Focus
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-23.jpg"
@@ -790,7 +870,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(114, 105, 145)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Peaceful Guitar</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Guitar
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-24.jpg"
@@ -801,12 +885,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(29, 219, 162)"
-              >
+              <div class="card" style="background-color: rgb(29, 219, 162)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Out Now</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Out Now
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-25.jpeg"
@@ -819,7 +904,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(180, 237, 21)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Party</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Party
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-27.jpg"
@@ -830,9 +919,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div class="card mb-4" style="background-color: rgb(189, 35, 25)">
+              <div class="card" style="background-color: rgb(189, 35, 25)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Afro</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Afro
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-28.jpg"
@@ -845,7 +938,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(23, 20, 19)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Classical Essential</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Classical
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-29.jpg"
@@ -856,12 +953,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(175, 57, 184)"
-              >
+              <div class="card" style="background-color: rgb(175, 57, 184)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">League of Legends</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Legends
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-30.jpg"
@@ -874,7 +972,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(219, 33, 86)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Metal</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Metal
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-31.jpg"
@@ -885,12 +987,13 @@
             </div>
 
             <div class="col col-12 col-sm-6 col-md-3">
-              <div
-                class="card mb-4"
-                style="background-color: rgb(52, 188, 207)"
-              >
+              <div class="card" style="background-color: rgb(52, 188, 207)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Funk</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Funk
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-32.jpg"
@@ -903,7 +1006,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(179, 27, 55)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">New Punk</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    New Punk
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-33.jpg"
@@ -916,7 +1023,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(29, 133, 107)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Ambient Essential</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Ambient
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-34.jpg"
@@ -929,7 +1040,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(132, 219, 70)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">K-Pop</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    K-Pop
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-35.jpg"
@@ -942,7 +1057,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(132, 219, 70)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Blues</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Blues
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-36.jpg"
@@ -955,7 +1074,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(2, 168, 201)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Metal</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Metal
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-37.jpeg"
@@ -968,7 +1091,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(2, 168, 201)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Classica</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Classica
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-38.jpg"
@@ -981,7 +1108,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(173, 42, 79)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Hot Country</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Hot Country
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-39.jpg"
@@ -994,7 +1125,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(44, 47, 69)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Frequency</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Frequency
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-40.jpg"
@@ -1007,7 +1142,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(217, 91, 202)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Arab-Pop</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Arab-Pop
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-41.jpg"
@@ -1020,7 +1159,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(68, 63, 87)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Radar</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Radar
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-43.png"
@@ -1033,7 +1176,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(68, 63, 87)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Bambini e Famiglia</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Family
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-44.png"
@@ -1046,7 +1193,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(28, 13, 84)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">In Auto</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    In Auto
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-45.png"
@@ -1059,7 +1210,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(161, 13, 161)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Phonk</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Phonk
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-46.jpeg"
@@ -1072,7 +1227,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(82, 240, 242)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Top Christian</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Top Christian
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-48.jpeg"
@@ -1085,7 +1244,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(54, 224, 96)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">RockerRas</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    RockerRas
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-50.jpg"
@@ -1098,7 +1261,11 @@
             <div class="col col-12 col-sm-6 col-md-3">
               <div class="card" style="background-color: rgb(242, 61, 209)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Mood</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Mood
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-51.jpg"
@@ -1111,7 +1278,11 @@
             <div class="col col-12 col-sm-6 col-md-3" id="contenitore">
               <div class="card" style="background-color: rgb(40, 153, 98)">
                 <div class="card-body">
-                  <h5 class="card-title text-light">Gaming</h5>
+                  <h5
+                    class="card-title text-light text-truncate overflow-hidden text-nowrap"
+                  >
+                    Gaming
+                  </h5>
                   <img
                     class="imgSearch"
                     src="/assets/imgs/search/image-52.jpg"
@@ -1649,6 +1820,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="js/search.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>
