@@ -158,7 +158,7 @@ const renderMusic2 = function (song) {
         const newRow = document.createElement('div')
         newRow.classList.add('row', 'mb-3', 'mt-3')
 
-        newRow.innerHTML = `<div class="col col-1 m-0 p-0">
+        newRow.innerHTML = `<div class="col col-1 m-0 p-0 mb-5">
         <p class="text-white ps-2 d-none d-md-flex" style="text-align: center; padding-top: 15px;">${i + 1}</p>
     </div>
     <div class="col col-3 col-md-3 col-lg-2 col-xxl-1 p-0">
