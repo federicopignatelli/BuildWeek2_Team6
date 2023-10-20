@@ -40,7 +40,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId)
         start.forEach((start1, index) => {
             start1.addEventListener('click', () => {
                 console.log('na merda', start1)
-                const song = obj.data[index]
+                const song = obj.tracks.data[index]
                 console.log(song)
                 const divFirst = document.getElementById('brano')
                 const div = document.createElement('div')
@@ -238,7 +238,7 @@ const songs = (obj1) => {
         </div>
 
         <div class="">
-        <a class="btn text-start p-0 text-light border-0 clickTrack" href=""><h6 class="fw-bold mb-0">${objData.title}</h6></a>
+        <a class="btn text-start p-0 text-light border-0 clickTrack" href="#"><h6 class="fw-bold mb-0">${objData.title}</h6></a>
         <p class="m-0 opacity-50" style="font-size:12px">${objData.artist.name}</p>
         </div>
 
