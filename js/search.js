@@ -43,7 +43,7 @@ const search = function (query) {
         col.innerHTML = `<div class="card bg-black text-white my-2">
      <img
        src="${data.data[randomNum].artist.picture_medium}"
-       class="card-img-top p-3"
+       class="card-img-top p-3 rounded-circle"
        alt="..."
      />
      <div class="card-body">
