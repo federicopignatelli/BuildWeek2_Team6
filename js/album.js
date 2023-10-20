@@ -238,7 +238,7 @@ const songs = (obj1) => {
         </div>
 
         <div class="">
-        <a class="btn text-start p-0 text-light border-0 clickTrack text-decoration-none" href=""><h6 class="fw-bold mb-0">${objData.title}</h6></a>
+        <a class="btn text-start p-0 text-light border-0 clickTrack" href=""><h6 class="fw-bold mb-0">${objData.title}</h6></a>
         <p class="m-0 opacity-50" style="font-size:12px">${objData.artist.name}</p>
         </div>
 
