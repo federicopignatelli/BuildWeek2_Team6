@@ -714,7 +714,7 @@
       </div>
       <div id="center-bar" class="col-md-6">
         <div id="player">
-          <div id="icon-player">
+          <div id="icon-player" class="d-none d-lg-flex">
             <button
               style="
                 --button-size: 32px;
@@ -809,7 +809,7 @@
               </svg>
             </button>
           </div>
-          <div>
+          <div class="d-none d-lg-flex">
             <button style="--button-size: 32px; fill: hsla(0, 0%, 100%, 0.7)""
             class="mnipjT4SLDMgwiDCEnRC" aria-label="Avanti"
             data-testid="control-button-skip-forward" >
@@ -851,7 +851,7 @@
             </button>
           </div>
         </div>
-        <div id="playback-bar">
+        <div id="playback-bar" class="d-none d-lg-flex">
           <div><span>0:00</span></div>
           <input
             type="range"
@@ -866,7 +866,10 @@
           <div><span>0:50</span></div>
         </div>
       </div>
-      <div id="volume-bar" class="col-md-3 d-flex justify-content-end">
+      <div
+        id="volume-bar"
+        class="col-md-3 d-lg-flex justify-content-end d-none"
+      >
         <div id="icon-volBar">
           <button
             style="fill: hsla(0, 0%, 100%, 0.7)"
