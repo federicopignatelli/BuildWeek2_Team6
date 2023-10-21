@@ -12,14 +12,14 @@ const progressBar = document.getElementById('progressBar');
 const audio = new Audio();
 let isPlaying = false;
 
-playBtn.addEventListener("click", () => {
+playBtn.addEventListener("click", (query) => {
   if (!isPlaying) {
     playBtn.style.display = "none";
     pauseBtn.style.display = "block";
     isPlaying = true;
 
     // Effettua una richiesta all'API di Deezer
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=lazza")
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+ query)
       // fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + trackId)
       .then(response => response.json())
       .then(data => {

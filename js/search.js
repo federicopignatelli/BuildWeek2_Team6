@@ -31,8 +31,8 @@ const search = function (query) {
       }
     })
 
-    .then((data) => {
-      console.log("ecco l'oggetto", data)
+    .then((obj) => {
+      console.log("ecco l'oggetto", obj)
       const row = document.getElementById("contenitore")
       row.innerHTML = ""
       for (let i = 0; i < 25; i++) {
@@ -42,13 +42,13 @@ const search = function (query) {
         const randomNum = Math.round(Math.random() * 25);
         col.innerHTML = `<div class="card bg-black text-white my-2">
      <img
-       src="${data.data[randomNum].artist.picture_medium}"
+       src="${obj.data[i].artist.picture_medium}"
        class="card-img-top p-3 rounded-circle"
        alt="..."
      />
      <div class="card-body">
-     <a href="#" class="clickTrack text-decoration-none text-white"><h5 class="card-title text-truncate overflow-hidden text-nowrap">${data.data[randomNum].album.title}</h5></a>
-       <p class="card-text text-truncate overflow-hidden">${data.data[randomNum].artist.name}</p>
+     <a href="#" class="clickTrack text-decoration-none text-white"><h5 class="card-title text-truncate overflow-hidden text-nowrap">${obj.data[i].album.title}</h5></a>
+       <p class="card-text text-truncate overflow-hidden">${obj.data[i].artist.name}</p>
      </div>
    </div>;`
         row.appendChild(col);
@@ -56,8 +56,8 @@ const search = function (query) {
       const start = document.querySelectorAll('.clickTrack')
       start.forEach((start1, index) => {
         start1.addEventListener('click', () => {
-          console.log('na merda', start1)
-          const song = data.data[index]
+          console.log('musica', start1)
+          const song = obj.data[index]
           console.log(song)
           const divFirst = document.getElementById('brano')
           const div = document.createElement('div')
